@@ -1,7 +1,7 @@
 export default function rootReducer(state = {
   goals: []
 }, action = {type:"ADD_GOAL", goal:"objective1"}){
-  console.log("hitaction");
+  console.log("hit action");
   switch(action.type){
     case 'ADD_GOAL':
       console.log("hit reducer and first action")

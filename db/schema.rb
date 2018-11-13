@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_213259) do
   enable_extension "plpgsql"
 
   create_table "goals", force: :cascade do |t|
-    t.string "description"
+    t.string "aim"
     t.string "category"
     t.string "strategy"
     t.datetime "created_at", null: false

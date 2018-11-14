@@ -9,4 +9,23 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
     render json: @goal, status: 200
   end
+
+  def create
+    @goal = Goal.create(goal_params)
+    render json: @goal, status: :created
+  end
+
+  def destroy
+    @goal = Goal.find(params[:id])
+    if @goal.destroy
+      head(:ok)
+    else
+      head(:unprocessable_entity)
+    end
+  end
+
+  private
+  def goal_params
+    params.require(:goal).permit(:aim, :strategy, :category)
+  end
 end

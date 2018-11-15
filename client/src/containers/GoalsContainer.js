@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 import AddGoal from '../components/Goals/AddGoal';
-import GoalList from '../components/Goals/GoalList';
+import GoalsList from '../components/Goals/GoalsList';
 
 
 class GoalsContainer extends Component {
+
+  constructor(){
+    super()
+    this.state = {
+      goals: []
+    }
+  }
+
+  componentDidMount(){
+    fetch('./api/goals')
+      .then(response => response.json())
+      .then(goals => this.setState({goals}))
+  }
   render(){
     return(
       <div>
         <AddGoal />
-        <GoalList />
+        <GoalsList goals={this.state.goals}/>
       </div>
     )
   }

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :objectives
-  resources :goals
+
+  scope :api do 
+    resources :goals do 
+      resources :objectives
+    end
+  end
 end

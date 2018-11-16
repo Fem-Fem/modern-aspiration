@@ -1,6 +1,9 @@
 class ObjectivesController < ApplicationController
+  before_action :set_goal
+  before_action :set_objective, only: [:show, :destroy]
+
   def index
-    @objectives = Objective.all
+    @objectives = @goal.objectives.all
     render json: @objectives
   end
 
@@ -15,7 +18,6 @@ class ObjectivesController < ApplicationController
   end
 
   def destroy
-    @objective = Objective.find(params[:id])
     if @objective.destroy
       head(:ok)
     else
@@ -27,4 +29,12 @@ class ObjectivesController < ApplicationController
   def objective_params
     params.require(:objective).permit(:aim, :strategy, :category)
   end
+
+  def set_goal
+    @goal = Goal.find_by(id: params[:goal_id])
+  end
+
+  def set_objective
+    @objective = @goal.objectives.find_by(id: params[:id])
+  end 
 end

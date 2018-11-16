@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Goal = ({ aim, strategy, category, objectives }) => (
   <div className="Goal">

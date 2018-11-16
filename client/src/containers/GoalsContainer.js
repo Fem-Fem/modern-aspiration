@@ -17,6 +17,7 @@ class GoalsContainer extends Component {
       .then(response => response.json())
       .then(goals => this.setState({goals}))
   }
+  
   render(){
     return(
       <div>

@@ -8,7 +8,7 @@ export default class GoalsList extends Component {
   
     const listGoals = goals.map(g => {
       return (
-        <li><Goal aim={g.aim} goal={g} strategy={g.strategy} category={g.category}/></li>
+        <li><Goal key={g.id} aim={g.aim} goal={g} strategy={g.strategy} category={g.category}/></li>
       )
     })
     

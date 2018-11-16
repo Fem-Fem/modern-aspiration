@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import GoalsContainer from './containers/GoalsContainer'
+import GoalsContainer from './containers/GoalsContainer';
+
 
 class App extends Component {
   render() {

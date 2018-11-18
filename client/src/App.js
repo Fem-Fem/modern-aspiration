@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Modern Aspiration</h1>
-        <GoalsContainer />
+        Make Nav Bar here with links to list of goals, make new goals, view completed 
       </div>
     );
   }

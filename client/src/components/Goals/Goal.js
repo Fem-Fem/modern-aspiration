@@ -2,10 +2,12 @@ import React from 'react';
 
 const Goal = ({ aim, strategy, category, objectives }) => (
   <div className="Goal">
-         <h3>Aspiration: {aim}</h3>
-         <h4>Strategy: {strategy}</h4>
-         <h5>Category: {category}</h5>
-       </div>
+    <h3>{aim}</h3>
+    <strong>Strategy:</strong>
+      <p>{strategy}</p>
+    <strong>Category:</strong>
+        <p>{category}</p>
+  </div>
 )
 
 export default Goal;

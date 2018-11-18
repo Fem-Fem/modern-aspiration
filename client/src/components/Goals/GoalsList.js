@@ -3,6 +3,7 @@ import Goal from './Goal';
 
 const GoalsList = ({ goals }) => (
   <div>
+    <h3>Your Aspirations</h3>
     <ol>
     {goals.map((goal) => (
       <li>

@@ -6,25 +6,33 @@ import { Route } from 'react-router-dom';
 import Home from './components/Home'
 import AddGoal from './components/Goals/AddGoal';
 import GoalsContainer from './containers/GoalsContainer';
-import { Button } from 'semantic-ui-react';
+
+//Semantic-Ui-Components
+import { Container } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
+
+
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>Modern Aspiration</h1>
-          <p>Stay Focused</p>
-          <Button>Click Me</Button>
+      <Container>
+        <Header as='h1' className="main-header">Modern Aspiration</Header>
+          <Header as='h3'className="tagline">TagLine here</Header>
+    
        
         <NavBar />
         
-        <div>
-          <Route exact path='/' render={Home} />
-          <Route exact path='/goals/new' component={AddGoal} />
-          <Route exact path='/goals' component={GoalsContainer} />
-        </div>
-      </div>
+          <div>
+            <Container>
+              <Route exact path='/' render={Home} />
+              <Route exact path='/goals/new' component={AddGoal} />
+              <Route exact path='/goals' component={GoalsContainer} />
+            </Container>
+          </div>
+         
+        </Container>
     );
   }
 }

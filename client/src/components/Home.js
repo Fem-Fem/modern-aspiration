@@ -2,8 +2,8 @@ import React from 'react';
 
 
 const Home = () => (
-  <div>
-    Welcome Home
+  <div className="home-page">
+    Home Page Content here
   </div>
 )
 

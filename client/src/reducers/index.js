@@ -1,12 +1,12 @@
 export default function rootReducer(state = {
   goals: []
-}, action = {type:"ADD_GOAL", goal:"objective1"}){
-  console.log("hit action");
+}, action
+){
   switch(action.type){
     case 'ADD_GOAL':
       console.log("hit reducer and first action")
       break;
     default:
-      console.log("hit default reducer statement")
+      return state;
   }
 }

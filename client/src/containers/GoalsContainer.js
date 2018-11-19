@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GoalsList from '../components/Goals/GoalsList';
+import AddGoal from '../components/Goals/AddGoal'
 
 
 class GoalsContainer extends Component {
@@ -19,8 +20,9 @@ class GoalsContainer extends Component {
   
   render(){
     return(
-      <div className="Goals-container"> 
+      <div> 
         <GoalsList goals={this.state.goals}/>
+        <AddGoal />
       </div>
     )
   }

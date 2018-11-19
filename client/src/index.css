@@ -13,7 +13,7 @@ code {
     monospace;
 }
 
-.main-header {
+.main-header, .main-content {
   text-align: center;
 }
 
@@ -25,3 +25,4 @@ code {
   text-align: center;
   padding: 20px;
 }
+

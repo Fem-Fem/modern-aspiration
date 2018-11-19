@@ -8,8 +8,7 @@ import AddGoal from './components/Goals/AddGoal';
 import GoalsContainer from './containers/GoalsContainer';
 
 //Semantic-Ui-Components
-import { Container } from 'semantic-ui-react';
-import { Header } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
 
 
 
@@ -18,7 +17,8 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Header as='h1' className="main-header">Modern Aspiration</Header>
+        {/* <Header as='h1' className="main-header App-Header">Modern Aspiration</Header> */}
+        <h1 className="App-header">Modern Aspiration</h1>
           <Header as='h3'className="tagline">TagLine here</Header>
     
        

@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom';
 import Home from './components/Home'
 import AddGoal from './components/Goals/AddGoal';
 import GoalsContainer from './containers/GoalsContainer';
+import { Button } from 'semantic-ui-react';
 
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
       <div className="App">
         <h1>Modern Aspiration</h1>
           <p>Stay Focused</p>
+          <Button>Click Me</Button>
        
         <NavBar />
         

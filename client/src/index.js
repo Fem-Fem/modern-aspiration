@@ -12,6 +12,7 @@ import rootReducer from './reducers/index';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 compose;
 
+// eslint-disable-next-line 
 const store =
 createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));
 

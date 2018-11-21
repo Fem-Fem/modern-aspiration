@@ -28,9 +28,14 @@ ReactDOM.render((
 );
 
 /* The Provider Component: 
+Does 2 things: 
+1. alerts the app when there has been a change in state.
+2. rerenders the React app. 
 To avoid passing the store as a prop, we use the Provider Component.
 The Provider component wraps the top level Element (App) and is the 
 only Component where store is passed in.
+By including the Provider, we're able to access the Redux store and/or dispatch
+actions from any component we want.
 */
 
 

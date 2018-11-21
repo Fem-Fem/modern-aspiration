@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/Navbar';
 import { Route } from 'react-router-dom';
 import Home from './components/Home'
-import AddGoal from './components/Goals/AddGoal';
+import GoalInput from './components/Goals/GoalInput';
 import GoalsContainer from './containers/GoalsContainer';
 
 //Semantic-Ui-Components
@@ -27,7 +27,7 @@ class App extends Component {
           <div>
             <Container>
               <Route exact path='/' render={Home} />
-              <Route exact path='/goals/new' component={AddGoal} />
+              <Route exact path='/goals/new' component={GoalInput} />
               <Route exact path='/goals' component={GoalsContainer} />
             </Container>
           </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Form } from 'semantic-ui-react';
 
-class AddGoal extends Component {
+class GoalInput extends Component {
 
   constructor(){
     super()
@@ -50,4 +50,8 @@ class AddGoal extends Component {
   }
 }
 
-export default connect()(AddGoal);
+export default connect()(GoalInput);
+
+// just like we can write code like connect(mapStateToProps)(App) to add new props to our app compoenent, we can pass
+// connect() a second argument, and add our action creator as props. Then we can reference this action creator as a prop
+// to call it from our component. 

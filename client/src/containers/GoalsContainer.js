@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GoalsList from '../components/Goals/GoalsList';
-import AddGoal from '../components/Goals/AddGoal';
+import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
 
 class GoalsContainer extends Component {
@@ -9,7 +9,7 @@ class GoalsContainer extends Component {
     return(
       <div>
         <GoalsList goals={this.props.goals} /> 
-        <AddGoal />
+        <GoalInput />
       </div> 
     )
   }

@@ -30,3 +30,12 @@ class GoalsContainer extends Component {
 
 export default GoalsContainer;
 
+
+/*
+Connect()
+Whatever function we pass to the connect() function will be called
+each time the state changes, and the first argument to that function,
+whatevver it's name, will be the state of the store
+ie. 
+export default connect( state => ({items: state.items})(App))
+*/

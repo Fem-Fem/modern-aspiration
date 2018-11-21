@@ -1,31 +1,55 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class AddGoal extends Component {
+class AddGoal extends Component {
 
   constructor(){
     super()
     this.state = {
-      value: ""
+      aim: "",
+      category: "",
+      strategy: ""
     }
   }
 
   handleChange = (e) =>{
     this.setState({
-      value: e.target.value
+      [e.target.id] : e.target.value
     })
 
   }
+
+  handleOnSubmit = (e) => {
+    e.preventDefault();
+    this.props.dispatch({type: "ADD_GOAL", goal: this.state })
+  }
+  
   render(){
     return(
       <div className="main-content">
         <h3>New Goal</h3>
-        <form>
-          <input type="text" 
-            value={this.state.value} 
-            onChange={(e) => this.handleChange(e)}
+        <form onSubmit={this.handleOnSubmit}>
+
+          <p>Your Aim:</p>
+          <input 
+            type="text" 
+            id="aim" 
+            onChange={this.handleChange}
             placeholder="What would you like to achieve" />
 
-          {this.state.value}
+          <p>Category</p>
+          <input 
+            type="text"
+            id="category"
+            onChange={this.handleChange}
+            placeholder="Category" />
+
+          <p>Your Strategy</p>
+          <input 
+            type="content-box"
+            id="strategy"
+            onChange={this.handleChange}
+            placeholder="How will you do it" />
 
           <input type="submit" value="Submit" />
         </form>
@@ -33,3 +57,5 @@ export default class AddGoal extends Component {
     )
   }
 }
+
+export default connect()(AddGoal);

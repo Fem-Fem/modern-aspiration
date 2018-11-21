@@ -7,7 +7,7 @@ const GoalsList = ({ goals }) => (
     <ol>
     {goals.map((goal) => (
       <li>
-        <Goal key={goal.id} aim={goal.aim} goal={goal} strategy={goal.strategy} 
+        <Goal aim={goal.aim} goal={goal} strategy={goal.strategy} 
           category={goal.category} objectives={goal.objectives} />
       </li> ))}
     </ol>

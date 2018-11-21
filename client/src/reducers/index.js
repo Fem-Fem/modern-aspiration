@@ -5,7 +5,6 @@ export default function rootReducer(state = {
   switch(action.type){
     case 'ADD_GOAL':
       console.log('adding', action.goal )
-      debugger;
       return {
         ...state,
         goals: [...state.goals, action.goal]

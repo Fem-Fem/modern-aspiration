@@ -13,11 +13,7 @@ code {
     monospace;
 }
 
-.main-header, .main-content {
-  text-align: center;
-}
-
-.tagline {
+.main-header, .main-content, .tagline {
   text-align: center;
 }
 
@@ -26,3 +22,8 @@ code {
   padding: 20px;
 }
 
+.new-goal-form {
+  width: 50%;
+  padding: 30px;
+  border-color: #282c34;
+}

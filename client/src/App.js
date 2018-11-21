@@ -19,7 +19,7 @@ class App extends Component {
       <Container>
         {/* <Header as='h1' className="main-header App-Header">Modern Aspiration</Header> */}
         <h1 className="App-header">Modern Aspiration</h1>
-          <Header as='h3'className="tagline">TagLine here</Header>
+          <Header as='h3'className="tagline">The starting point of all achievement is DESIRE. Weak desire brings weak results, just a small fire makes a small amount of heat. - Napolean Hill</Header>
     
        
         <NavBar />

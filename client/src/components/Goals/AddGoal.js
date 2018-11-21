@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button, Form } from 'semantic-ui-react';
 
 class AddGoal extends Component {
 
@@ -23,37 +24,28 @@ class AddGoal extends Component {
     e.preventDefault();
     this.props.dispatch({type: "ADD_GOAL", goal: this.state })
   }
-  
+
   render(){
     return(
-      <div className="main-content">
-        <h3>New Goal</h3>
-        <form onSubmit={this.handleOnSubmit}>
+      <Form onSubmit={this.handleOnSubmit}>
+      
+        <Form.Field>
+          <label>Your Aim:</label>
+          <input placeholder="Aim" id="aim" onChange={this.handleChange} />
+        </Form.Field>
 
-          <p>Your Aim:</p>
-          <input 
-            type="text" 
-            id="aim" 
-            onChange={this.handleChange}
-            placeholder="What would you like to achieve" />
+        <Form.Field>
+          <label>Category</label>
+          <input placeholder="category" id="category" onChange={this.handleChange}/>
+        </Form.Field>
 
-          <p>Category</p>
-          <input 
-            type="text"
-            id="category"
-            onChange={this.handleChange}
-            placeholder="Category" />
+        <Form.Field>
+          <label>Your Strategy:</label>
+          <input placeholder="How will you get there?" id="strategy" onChange={this.handleChange} />
+        </Form.Field>
 
-          <p>Your Strategy</p>
-          <input 
-            type="content-box"
-            id="strategy"
-            onChange={this.handleChange}
-            placeholder="How will you do it" />
-
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+        <Button type="submit">Add Goal</Button>
+      </Form>
     )
   }
 }

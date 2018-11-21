@@ -3,23 +3,21 @@ import GoalsList from '../components/Goals/GoalsList';
 import AddGoal from '../components/Goals/AddGoal';
 import { connect } from 'react-redux';
 
-
 class GoalsContainer extends Component {
   
   render(){
     return(
-      <div> 
-        hi
-        <GoalsList goals={this.props.goals}/>
+      <div>
+        { this.props.goals.length > 0 ?  <GoalsList goals={this.props.goals} /> : null }
         <AddGoal />
-      </div>
+      </div> 
     )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    goals: state.goals
+    goals: state.goals.goals
   }
 }
 

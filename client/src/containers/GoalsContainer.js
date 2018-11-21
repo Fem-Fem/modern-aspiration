@@ -8,7 +8,7 @@ class GoalsContainer extends Component {
   render(){
     return(
       <div>
-        { this.props.goals.length > 0 ?  <GoalsList goals={this.props.goals} /> : null }
+        <GoalsList goals={this.props.goals} /> 
         <AddGoal />
       </div> 
     )

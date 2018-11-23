@@ -26,6 +26,7 @@ class GoalInput extends Component {
     this.props.addGoal(this.state)
   }
 
+
   render(){
     return(
       <Form className="new-goal-form" onSubmit={this.handleOnSubmit}>

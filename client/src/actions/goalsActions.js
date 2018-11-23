@@ -7,3 +7,6 @@ export const fetchGoals = () => {
   }
 }
 
+export const addGoal = ( goalInput ) => {
+  return ({ type: "ADD_GOAL", goal: goalInput })
+}

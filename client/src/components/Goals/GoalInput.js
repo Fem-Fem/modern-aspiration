@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Form } from 'semantic-ui-react';
+import { addGoal } from '../../actions/goalsActions'
 
 class GoalInput extends Component {
 
@@ -21,8 +22,8 @@ class GoalInput extends Component {
   }
 
   handleOnSubmit = (e) => {
-    e.preventDefault()
-    this.props.dispatch({type: "ADD_GOAL", goal: this.state })
+    e.preventDefault();
+    this.props.addGoal(this.state)
   }
 
   render(){
@@ -50,7 +51,7 @@ class GoalInput extends Component {
   }
 }
 
-export default connect()(GoalInput);
+export default connect(null, { addGoal })(GoalInput);
 
 // just like we can write code like connect(mapStateToProps)(App) to add new props to our app compoenent, we can pass
 // connect() a second argument, and add our action creator as props. Then we can reference this action creator as a prop

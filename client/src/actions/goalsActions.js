@@ -1,4 +1,4 @@
-export const fetchGoals = () => {
+export function fetchGoals(){
   return (dispatch) => {
     dispatch({ type: "LOADING_GOALS"});
     return fetch('/api/goals.json')
@@ -10,3 +10,4 @@ export const fetchGoals = () => {
 export const addGoal = ( goalInput ) => {
   return ({ type: "ADD_GOAL", goal: goalInput })
 }
+

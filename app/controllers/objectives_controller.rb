@@ -27,7 +27,7 @@ class ObjectivesController < ApplicationController
 
   private
   def objective_params
-    params.require(:objective).permit(:aim, :strategy, :category)
+    params.require(:objective).permit(:description)
   end
 
   def set_goal

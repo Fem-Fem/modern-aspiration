@@ -7,9 +7,6 @@ export default function goalsReducer(state = {
       case 'CREATE_GOAL':
         console.log('creating', action.payload)
         return {...state, goalsData:[...state.goalsData, action.payload]}
-      case 'ADD_GOAL':
-        console.log('adding', action.goal )
-        return {...state, goalsData: [...state.goalsData, action.goal]}
       case 'LOADING_GOALS':
         console.log("loading goals now")
         return {...state, loading: true}

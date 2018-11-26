@@ -9,9 +9,7 @@ export function fetchGoals(){
   }
 }
 
-// export const addGoal = ( goalInput ) => {
-//   return ({ type: "ADD_GOAL", goal: goalInput })
-// }
+
 export const addGoal = ( goalInput ) => {
   let data = {
     method: 'POST',
@@ -21,7 +19,6 @@ export const addGoal = ( goalInput ) => {
     },
     body: JSON.stringify(goalInput)
   }
-
   return dispatch => {
     fetch(`${ goalURL }`, data)
       .then(response => response.json())

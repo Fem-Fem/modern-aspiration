@@ -9,7 +9,7 @@ export default function goalsReducer(state = [], action){
     case 'FETCH_GOALS':
       console.log("fetch goals")
       // return {loading: false, goals: action.payload}
-      return [...state, action.payload]
+      //return [...state, action.payload]
     default:
       console.log("hit default case in reducer")
       return state;

@@ -1,17 +1,16 @@
 import React from 'react';
 import Goal from './Goal';
 
-const GoalsList = ({ goals }) => (
-  <div>
-    <h3>Your Aspirations</h3>
+const GoalsList = props => {
+  const goalsList = props.goals.map(goal => <li><Goal key={goal.id} {...goal} deleteGoal={props.deleteGoal}/></li>)
+
+  return (
     <ol>
-    {goals.map((goal) => (
-      <li>
-        <Goal aim={goal.aim} goal={goal} strategy={goal.strategy} 
-          category={goal.category} objectives={goal.objectives} />
-      </li> ))}
+      {goalsList}
     </ol>
-  </div>
-);
+  );
+
+};
+
 
 export default GoalsList;

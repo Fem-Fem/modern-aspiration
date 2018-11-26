@@ -30,3 +30,6 @@ export const addGoal = ( goalInput ) => {
   }
 }
 
+export function deleteGoal(goal_id){
+  return ({type: "DELETE_GOAL", payload: goal_id})
+}

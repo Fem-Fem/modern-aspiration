@@ -13,6 +13,10 @@ export default function goalsReducer(state = {
       case 'FETCH_GOALS':
         console.log("fetch goals")
         return {loading: false, goalsData: action.payload}
+      case 'DELETE_GOAL':
+        console.log("In REDUCER: deleting", action.payload)
+        return state;
+        //return {...state, goalsData: state.goalsData.filter(goal => goal.id !== action.id)}
       default:
         console.log("hit default case in reducer")
         return state;

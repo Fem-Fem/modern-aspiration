@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoalsList from '../components/Goals/GoalsList';
 import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
-import { fetchGoals } from  '../actions/goalsActions'
+import { fetchGoals,deleteGoal } from  '../actions/goalsActions'
 
 class GoalsContainer extends Component {
 
@@ -13,7 +13,7 @@ class GoalsContainer extends Component {
   render(){
     return(
       <div>
-        <GoalsList goals={this.props.goals} /> 
+        <GoalsList goals={this.props.goals} deleteGoal={this.props.deleteGoal}/> 
         <GoalInput />
       </div> 
     )
@@ -21,7 +21,6 @@ class GoalsContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-
   return {
     goals: state.goals.goalsData
   }
@@ -35,7 +34,7 @@ Connect also takes the return value of the mapStateToProps() function and passes
 We are taking part of the state and mapping them as props to the component
 */
 
-export default connect(mapStateToProps, { fetchGoals })(GoalsContainer);
+export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);
 
 
 /*

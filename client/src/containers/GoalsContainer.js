@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoalsList from '../components/Goals/GoalsList';
 import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
-import { fetchGoals,deleteGoal } from  '../actions/goalsActions'
+import { fetchGoals, deleteGoal } from  '../actions/goalsActions'
 
 class GoalsContainer extends Component {
 

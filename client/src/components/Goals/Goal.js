@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // const Goal = ({ aim, strategy, category, objectives }) => (
   // <div className="Goal">
@@ -10,13 +10,9 @@ import React from 'react';
 //   </div>
 // )
 
-class Goal extends React.Component {
-  handleClick = () => {
-    this.props.deleteGoal(this.props.id)
-  }
-
+class Goal extends Component {
   render(){
-    const {aim, strategy, category, key, objectives } = this.props;
+    const {aim, strategy, category, objectives } = this.props;
     return(
       <div className="Goal">
         <h3>{aim}</h3>
@@ -24,7 +20,7 @@ class Goal extends React.Component {
           <p>{strategy}</p>
         <strong>Category:</strong>
             <p>{category}</p>
-        <button onClick={() => this.handleClick()}>Delete</button>
+        <button onClick={ () => this.props.deleteGoal(this.props.id)}>Delete</button>
       </div>
     )
   }

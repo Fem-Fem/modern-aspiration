@@ -17,11 +17,8 @@ class GoalsController < ApplicationController
 
   def destroy
     @goal = Goal.find(params[:id])
-    if @goal.destroy
-      head(:ok)
-    else
-      head(:unprocessable_entity)
-    end
+    @goal.destroy
+    render json: @goal
   end
 
   private

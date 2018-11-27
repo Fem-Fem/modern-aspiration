@@ -2,10 +2,6 @@
 text-align: center;
 }
 
-.Goals-container {
-text-align: left;
-}
-
 .App-header {
 background-color: #282c34;
 min-height: 50vh;
@@ -21,3 +17,9 @@ color: white;
 color: #61dafb;
 }
 
+div.goal {
+  padding: 20px;
+  border-style: solid;
+  margin-top: 10px;
+  
+}

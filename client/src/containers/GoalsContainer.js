@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import GoalsList from '../components/Goals/GoalsList';
 import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
-import { fetchGoals, deleteGoal } from  '../actions/goalsActions'
+import { fetchGoals, deleteGoal } from  '../actions/goalsActions';
+import { Container } from 'semantic-ui-react';
 
 class GoalsContainer extends Component {
 
@@ -12,10 +13,12 @@ class GoalsContainer extends Component {
   
   render(){
     return(
-      <div>
+      <Container fluid textAlign='justified'>
+        
         <GoalsList goals={this.props.goals} deleteGoal={this.props.deleteGoal}/> 
         <GoalInput />
-      </div> 
+         
+      </Container>
     )
   }
 }

@@ -38,17 +38,17 @@ class GoalInput extends Component {
 
         <Form.Field>
           <label>Your Aim:</label>
-          <input placeholder="Aim" id="aim" value={this.state.aim} onChange={(e) =>this.handleChange(e)} />
+          <input placeholder="Aim" id="aim" required value={this.state.aim} onChange={(e) =>this.handleChange(e)} />
         </Form.Field>
 
         <Form.Field>
           <label>Category</label>
-          <input placeholder="Category" id="category" value={this.state.category} onChange={this.handleChange}/>
+          <input placeholder="Category" required id="category" value={this.state.category} onChange={this.handleChange}/>
         </Form.Field>
 
         <Form.Field>
           <label>Your Strategy:</label>
-          <input placeholder="How will you get there?" id="strategy" value={this.state.strategy} onChange={this.handleChange} />
+          <input placeholder="How will you get there?" required id="strategy" value={this.state.strategy} onChange={this.handleChange} />
         </Form.Field>
 
         <Button type="submit">Add Goal</Button>

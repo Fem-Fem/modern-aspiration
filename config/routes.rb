@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       resources :objectives
     end
   end
+
+  get '/api/goals/:id/toggle', to: 'goals#toggle'
 end

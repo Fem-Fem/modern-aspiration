@@ -1,8 +1,4 @@
 const goalsURL = "/api/goals";
-const headers = {
-  'Accept': 'application/json',
-  'Content-Type': 'application/json'
-}
 
 export function fetchGoals(){
   return (dispatch) => {
@@ -53,4 +49,3 @@ export const deleteGoal = (goal_id) =>{
       .catch(err => err)
   }
 }
-

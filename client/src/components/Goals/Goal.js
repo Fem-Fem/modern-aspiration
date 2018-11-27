@@ -13,7 +13,7 @@ class Goal extends Component {
         <strong>Category:</strong>
             <p>{category}</p>
         <Button basic color='red' size='mini' onClick={ () => this.props.deleteGoal(this.props.id)}>Delete</Button>
-        <p><ObjectivesContainer goal={goal} objectives={objectives} /></p>
+        <ObjectivesContainer goal={goal} objectives={objectives} />
       </div>
     )
   }

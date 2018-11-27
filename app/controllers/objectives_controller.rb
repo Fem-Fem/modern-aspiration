@@ -13,7 +13,7 @@ class ObjectivesController < ApplicationController
   end
 
   def create
-    @objective = Objective.create(objective_params)
+    @objective = @goal.objectives.create(objective_params)
     render json: @objective, status: :created
   end
 

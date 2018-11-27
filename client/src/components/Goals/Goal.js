@@ -19,4 +19,16 @@ class Goal extends Component {
   }
 }
 
+// const Goal = ({ goal, aim, strategy, category, key, deleteGoal, objectives }) => (
+//   <div className="goal">
+//     <h3>{aim}</h3>
+//     <strong>Strategy:</strong>
+//       <p>{strategy}</p>
+//     <strong>Category:</strong>
+//         <p>{category}</p>
+//     <Button onClick={ () => deleteGoal(key)}>Delete</Button>
+//     <p><ObjectivesContainer goal={goal} objectives={objectives} /></p>
+//   </div>
+// )
+
 export default Goal;

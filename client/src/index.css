@@ -23,15 +23,7 @@ code {
 }
 
 .new-goal-form {
-  width: 50%;
+  width: 45%;
   padding: 30px;
   border-color: #282c34;
-}
-
-.container {
-  border: #282c34;
-}
-
-.goalsList {
-  border-bottom-color: red;
 }

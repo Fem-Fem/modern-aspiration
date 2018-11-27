@@ -4,7 +4,7 @@ import ObjectivesContainer from '../../containers/ObjectivesContainer';
 
 class Goal extends Component {
   render(){
-    const {aim, strategy, category, objectives } = this.props;
+    const {aim, strategy, category, objectives, goal } = this.props;
     return(
       <div className="goal">
         <h3>{aim}</h3>
@@ -13,7 +13,7 @@ class Goal extends Component {
         <strong>Category:</strong>
             <p>{category}</p>
         <Button basic color='red' size='mini' onClick={ () => this.props.deleteGoal(this.props.id)}>Delete</Button>
-        <p><ObjectivesContainer /></p>
+        <p><ObjectivesContainer goal={goal} objectives={objectives} /></p>
       </div>
     )
   }

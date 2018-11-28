@@ -6,9 +6,9 @@ export default function objectivesReducer(state = {
     case 'LOADING_OBJECTIVES':
       console.log("loading goals now")
       return {...state, loading: true}
-    case 'FETCH_OBJECTIVES':
-      console.log('Fetching Objectives', action.payload )
-      return {loading: false, objectivesData: action.payload}
+    case 'CREATE_OBJECTIVE':
+      console.log('CREATE Objective', action.payload )
+      return {...state, goalsData:[...state.goalsData, action.payload]}
     default:
       console.log("hit default case in objective reducer")
       return state;

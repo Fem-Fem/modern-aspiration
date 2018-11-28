@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GoalsList from '../components/Goals/GoalsList';
+import Goals from '../components/Goals/Goals';
 import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
 import { fetchGoals, deleteGoal } from  '../actions/goalsActions';
@@ -13,10 +13,10 @@ class GoalsContainer extends Component {
   
   render(){
     return(
-      <Container fluid textAlign='justified'>
+      <Container>
         
         <GoalInput />
-        <GoalsList goals={this.props.goals} deleteGoal={this.props.deleteGoal}/> 
+        <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/> 
         
       </Container>
     )
@@ -38,6 +38,7 @@ We are taking part of the state and mapping them as props to the component
 */
 
 export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);
+
 
 
 /*

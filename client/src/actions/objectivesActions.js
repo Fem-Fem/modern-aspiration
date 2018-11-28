@@ -19,3 +19,23 @@ export const addObjective = ( objectiveInput, goalId ) => {
       .catch(err => err)
   }
 }
+
+export const deleteObjective = id => {
+  let data = {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }
+
+  return dispatch => {
+    fetch(`/objectives/${ id }`, data)
+      .then(response => response.json())
+      .then(objective => dispatch({
+        type: 'DELETE_OBJECTIVE',
+        payload: objective
+      }))
+      .catch(err => err)
+  }
+}

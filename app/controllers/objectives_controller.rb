@@ -1,6 +1,6 @@
 class ObjectivesController < ApplicationController
   before_action :set_goal
-  before_action :set_objective, only: [:show, :destroy]
+  before_action :set_objective, only: [:show]
 
   def index
     @objectives = @goal.objectives.all
@@ -18,9 +18,9 @@ class ObjectivesController < ApplicationController
   end
 
   def destroy
+    @objective = Objective.find(params[:id])
     @objective.destroy
     render json: @objective
-    end
   end
 
   private

@@ -1,7 +1,7 @@
 import React from 'react';
 import Objective from './Objective'
 
-const ObjectivesList = props => {
+const Objectives = props => {
   const objectivesList = props.objectives.map(objective =><li><Objective key={objective.id} goalId={objective.id} description={objective.description}/></li>)
 
   return (
@@ -14,4 +14,4 @@ const ObjectivesList = props => {
 
 };
 
-export default ObjectivesList;
+export default Objectives;

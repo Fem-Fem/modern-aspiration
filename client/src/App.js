@@ -6,7 +6,6 @@ import { Route } from 'react-router-dom';
 import Home from './components/Home'
 import GoalInput from './components/Goals/GoalInput';
 import GoalsContainer from './containers/GoalsContainer';
-import ObjectivesContainer from './containers/ObjectivesContainer';
 
 //Semantic-Ui-Components
 import { Container, Header } from 'semantic-ui-react';
@@ -28,8 +27,7 @@ class App extends Component {
           <Route exact path='/' render={Home} />
           <Route exact path='/goals/new' component={GoalInput} />
           <Route exact path='/goals' component={GoalsContainer} />
-          {/* <Route exact path='/goals/:goal_id/objectives' component={ObjectivesContainer} /> */}
-          {/* <Route path="/my/path" render={(routeProps) => (<ObjectivesContainer {...routeProps} />)}/> */}
+
         </Container>
         
          

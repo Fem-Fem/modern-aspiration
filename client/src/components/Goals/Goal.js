@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Grid } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import ObjectivesContainer from '../../containers/ObjectivesContainer';
 
 class Goal extends Component {
@@ -13,7 +13,7 @@ class Goal extends Component {
         <strong>Category:</strong>
             <p>{category}</p>
         <Button basic color='red' size='mini' onClick={ () => this.props.deleteGoal(this.props.id)}>Delete</Button>
-        <ObjectivesContainer goal={goal} objectives={objectives} />
+        <ObjectivesContainer goal={goal} />
       </div>
     )
   }

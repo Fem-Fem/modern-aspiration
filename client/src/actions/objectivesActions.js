@@ -19,5 +19,3 @@ export const addObjective = ( objectiveInput, goalId ) => {
       .catch(err => err)
   }
 }
-
-

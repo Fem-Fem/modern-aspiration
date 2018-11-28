@@ -8,7 +8,7 @@ export default function objectivesReducer(state = {
       return {...state, loading: true}
     case 'CREATE_OBJECTIVE':
       console.log('CREATE Objective', action.payload )
-      return {...state, goalsData:[...state.goalsData, action.payload]}
+      return {...state, objectivesData:[...state.objectivesData, action.payload]}
     default:
       console.log("hit default case in objective reducer")
       return state;

@@ -11,20 +11,25 @@ class ObjectivesContainer extends Component {
       <div>
         Objectives Container
         <ObjectiveInput addObjective={this.props.addObjective} goalId={this.props.goal.id}/>
+        <Objectives objectives={this.props.objectives} />
+      
+    
       </div>
     )
   }
 }
 
-const mapStateToProps = ({objectives}) => {
-  return {objectives}
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     objectives: state.objectives.objectivesData
+//   }
+// }
 
 const mapDispatchToProps = dispatch => ({
   addObjective: (objectiveInput, goalId) => dispatch(addObjective(objectiveInput, goalId))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ObjectivesContainer);
+export default connect(null, mapDispatchToProps)(ObjectivesContainer);
 
 /*
 1. Goal component renders ObjectivesContainer with prop of goal

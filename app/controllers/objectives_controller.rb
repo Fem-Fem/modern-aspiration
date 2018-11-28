@@ -18,10 +18,8 @@ class ObjectivesController < ApplicationController
   end
 
   def destroy
-    if @objective.destroy
-      head(:ok)
-    else
-      head(:unprocessable_entity)
+    @objective.destroy
+    render json: @objective
     end
   end
 

@@ -34,10 +34,11 @@ class GoalInput extends Component {
 
   render(){
     return(
+      
       <Form className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
-
+        <h5>Set a New Goal</h5>
         <Form.Field>
-          <label>Main Goal</label>
+          <label>AIM</label>
           <input placeholder="What do you want?" id="aim" required value={this.state.aim} onChange={(e) =>this.handleChange(e)} />
         </Form.Field>
 

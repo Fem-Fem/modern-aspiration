@@ -12,10 +12,17 @@ export const addObjective = ( objectiveInput, goalId ) => {
   return dispatch => {
     fetch(`${ goalsURL }/${goalId}/objectives`, data)
       .then(response => response.json())
-      .then(objective => dispatch({
-        type: 'CREATE_OBJECTIVE',
-        payload: objective
-      }))
+      .then(objective => {
+        let res = {
+          objective,
+          goalId
+        }
+
+        dispatch({
+          type: 'UPDATE_OBJECTIVE',
+          payload: res
+        })
+      })
       .catch(err => err)
   }
 }

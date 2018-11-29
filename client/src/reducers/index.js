@@ -4,7 +4,7 @@ import objectivesReducer from './manageObjectives';
 
 const rootReducer = combineReducers({
   goals: goalsReducer,
-  objectives: objectivesReducer
+  // objectives: objectivesReducer
 })
 
 export default rootReducer;

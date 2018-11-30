@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { fetchGoals, deleteGoal } from  '../actions/goalsActions';
 import { Container } from 'semantic-ui-react';
 import GoalsHeader from '../components/GoalsHeader';
+import { addObjective, deleteObjective } from '../actions/objectivesActions'
+
 
 class GoalsContainer extends Component {
 
@@ -13,12 +15,13 @@ class GoalsContainer extends Component {
   }
   
   render(){
+  
     return(
       <Container>
         
         <GoalInput />
         <GoalsHeader />
-        <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/> 
+        <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal} addObjective={this.props.addObjective} deleteObjective={this.props.deleteObjective}/> 
         
       </Container>
     )
@@ -31,6 +34,15 @@ const mapStateToProps = (state) => {
   }
 }
 
+
+const mapDispatchToProps = dispatch => ({
+  addObjective: (objectiveInput, goalId) => dispatch(addObjective(objectiveInput, goalId)),
+  deleteObjective: objectiveId => dispatch(deleteObjective(objectiveId)),
+  fetchGoals: () => dispatch(fetchGoals()),
+  deleteGoal: (goalId) => dispatch(deleteGoal(goalId))
+})
+
+
 /* The connect function calls the mapStateToProps() function each time there is a change in state.
 That mapStateToProps() function receives the state as its first argument and it can happily ignore the stores state and 
 return whatever it likes.
@@ -39,7 +51,7 @@ Connect also takes the return value of the mapStateToProps() function and passes
 We are taking part of the state and mapping them as props to the component
 */
 
-export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(GoalsContainer);
 
 
 

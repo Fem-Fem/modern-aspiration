@@ -40,6 +40,6 @@ class ObjectiveInput extends Component {
 }
 
 export default ObjectiveInput;
-//export default connect(null, { addObjective })(ObjectiveInput);
+
 
   

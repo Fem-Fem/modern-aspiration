@@ -26,6 +26,7 @@ class ObjectiveInput extends Component {
 
   render(){
     return(
+  
       <Form className="new-objective-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
 
         <Form.Field>
@@ -35,6 +36,7 @@ class ObjectiveInput extends Component {
 
         <Button size='mini' type="submit">Submit</Button>
       </Form>
+  
     )
   }
 }

@@ -1,5 +1,23 @@
 const goalsURL = "/api/goals";
 
+export const fetchGoalObjectives = (goalId) => {
+  return dispatch => {
+    fetch(`api/goals/${goalId}/objectives`)
+      .then(response => response.json())
+      .then(objectives => {
+        let res = {
+          objectives,
+          goalId
+        }
+        dispatch({
+            type: 'FETCH_OBJECTIVES',
+            payload: res
+        })
+      })
+      .catch(err => err)
+  }
+}
+
 export const addObjective = ( objectiveInput, goalId ) => {
   let data = {
     method: 'POST',

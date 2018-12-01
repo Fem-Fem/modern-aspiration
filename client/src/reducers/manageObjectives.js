@@ -3,6 +3,12 @@ export default function objectivesReducer(state = {
   objectivesData: []}, 
   action){
   switch(action.type){
+    case 'FETCH_OBJECTIVES':
+      console.log("Fetching objectives", action.payload)
+      return {...state, objectivesData: ( action.payload.objectives.map((objective) => {
+        objective['goalId'] = objective.goal.id;
+        return objective;})
+        )}
     case 'LOADING_OBJECTIVES':
       console.log("loading goals now")
       return {...state, loading: true}

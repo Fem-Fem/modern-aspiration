@@ -4,7 +4,7 @@ import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
 import { fetchGoals, deleteGoal } from  '../actions/goalsActions';
 import { Container } from 'semantic-ui-react';
-import GoalsHeader from '../components/GoalsHeader';
+import GoalsHeader from '../components/Goals/GoalsHeader';
 
 class GoalsContainer extends Component {
 
@@ -40,14 +40,3 @@ We are taking part of the state and mapping them as props to the component
 */
 
 export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);
-
-
-
-/*
-Connect()
-Whatever function we pass to the connect() function will be called
-each time the state changes, and the first argument to that function,
-whatevver it's name, will be the state of the store
-ie. 
-export default connect( state => ({items: state.items})(App))
-*/

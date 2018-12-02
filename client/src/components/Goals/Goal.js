@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
 import ObjectivesContainer from '../../containers/ObjectivesContainer';
-import { addObjective, deleteObjective, fetchGoalObjectives } from '../../actions/objectivesActions';
-import { connect } from 'react-redux';
 
 
 class Goal extends Component {
 
 
   render(){
-    const {aim, strategy, category, goal, objectives } = this.props;
+    const {aim, strategy, category, goal } = this.props;
     
     return(
       <div className="goal">
@@ -19,17 +17,13 @@ class Goal extends Component {
         <strong>Category:</strong>
             <p>{category}</p>
         <Button basic color='red' size='mini' onClick={ () => this.props.deleteGoal(this.props.id)}>Delete</Button>
-        <ObjectivesContainer goal={goal} objectives={objectives} deleteObjective={this.props.deleteObjective} addObjective={this.props.addObjective}/>
+        <ObjectivesContainer goal={goal} />
       </div>
     )
   }
 }
 
 
-const mapDispatchToProps = dispatch => ({
-  fetchGoalObjectives: goalId => dispatch(fetchGoalObjectives(goalId)),
-  addObjective: (objectiveInput, goalId) => dispatch(addObjective(objectiveInput, goalId)),
-  deleteObjective: objectiveId => dispatch(deleteObjective(objectiveId))
-})
 
-export default connect(null, mapDispatchToProps)(Goal);
+
+export default Goal;

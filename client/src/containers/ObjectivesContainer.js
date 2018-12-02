@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 
 class ObjectivesContainer extends Component {
   render(){
-    debugger
     return(
       <div>
         ObjectivesContainer

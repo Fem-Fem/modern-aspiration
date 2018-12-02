@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import { fetchGoals, deleteGoal } from  '../actions/goalsActions';
 import { Container } from 'semantic-ui-react';
 import GoalsHeader from '../components/Goals/GoalsHeader';
+import { Route } from 'react-router-dom';
+import GoalShow from '../components/Goals/GoalShow';
+
 
 class GoalsContainer extends Component {
 
@@ -18,6 +21,10 @@ class GoalsContainer extends Component {
         
         <GoalInput />
         <GoalsHeader />
+
+        <Route exact path={this.props.match.url} render={()=>(<h3>Select a Goal From the List </h3>)}  />
+        <Route exact path={`${this.props.match.url}/:goalId`} component={GoalShow} />
+
         <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/> 
         
       </Container>

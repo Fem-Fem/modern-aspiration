@@ -4,9 +4,28 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div className='navbar'>
-      <NavLink to ="/">Home</NavLink> <span> | </span>
-        <NavLink to ="/goals/new">New Goal</NavLink> <span> | </span>
-        <NavLink to ="/goals">Your Goals </NavLink>
+
+      <NavLink to ="/"
+        exact
+        activeStyle={{
+          color: 'grey'
+        }}>Home</NavLink> 
+        
+        <span> | </span>
+
+      <NavLink to ="/goals/new"
+        exact
+        activeStyle ={{
+          color: 'grey'
+        }}>New Goal</NavLink> 
+        
+        <span> | </span>
+
+      <NavLink to ="/goals"
+        exact
+        activeStyle={{
+          color: 'grey'
+        }}>Your Goals </NavLink>
     </div>
   )
 }

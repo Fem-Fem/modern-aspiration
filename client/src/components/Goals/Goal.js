@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
 import ObjectivesContainer from '../../containers/ObjectivesContainer';
-
+import { Link } from 'react-router-dom';
 
 class Goal extends Component {
 
@@ -11,7 +11,7 @@ class Goal extends Component {
     
     return(
       <div className="goal">
-        <h3>{aim}</h3>
+        <Link key={this.props.id} to={`/goals/${goal.id}`}><h3>{aim}</h3></Link>
         <strong>Strategy:</strong>
           <p>{strategy}</p>
         <strong>Category:</strong>

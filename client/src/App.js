@@ -10,16 +10,13 @@ import GoalsContainer from './containers/GoalsContainer';
 //Semantic-Ui-Components
 import { Container, Header } from 'semantic-ui-react';
 
-
-
-
 class App extends Component {
   render() {
     return (
       <div>
         <h1 className="App-header">Modern Aspiration</h1>
         <Container>
-          <Header as='h3'className="tagline">The starting point of all achievement is DESIRE. Weak desire brings weak results, just a small fire makes a small amount of heat. - Napolean Hill</Header>
+          <Header as='h3'className="tagline">Tough times don't last; tough people do.</Header>
     
        
           <NavBar />
@@ -27,8 +24,8 @@ class App extends Component {
           <Container>
             <Route exact path='/' render={Home} />
             <Route exact path='/goals/new' component={GoalInput} />
-            <Route exact path='/goals' component={GoalsContainer} />
-
+            {/* <Route exact path='/goals' component={GoalsContainer} /> */}
+            <Route path='/goals' render={routerProps => <GoalsContainer {...routerProps}/>}/>
           </Container>
         
         </Container>
@@ -38,3 +35,5 @@ class App extends Component {
 }
 
 export default App;
+
+

@@ -3,8 +3,8 @@ import React from 'react';
 
 const Home = () => (
   <div className="home-page">
-    <h4>Home Page Content here</h4>
-    <p> GET IT</p>
+    <h4>Set your goals</h4>
+    <p> Work to acheive them</p>
   </div>
 )
 

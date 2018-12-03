@@ -3,7 +3,7 @@ import Objectives from '../components/Objectives/Objectives';
 import ObjectiveInput from '../components/Objectives/ObjectiveInput';
 import { addObjective, deleteObjective, fetchGoalObjectives } from '../actions/objectivesActions';
 import { connect } from 'react-redux';
-import { fetchGoal } from '../actions/goalsActions'
+import { fetchGoal } from '../actions/goalsActions';
 
 
 class ObjectivesContainer extends Component {
@@ -12,13 +12,11 @@ class ObjectivesContainer extends Component {
     this.props.fetchGoalObjectives(this.props.match.params.goalId)
     this.props.fetchGoal(this.props.match.params.goalId)
   }
-
   
   render(){
     const goalId = this.props.match.params.goalId
     return(
       <div>
-        ObjectivesContainer
         <Objectives goal={this.props.goal} objectives={this.props.objectives} deleteObjective={this.props.deleteObjective} />
         <ObjectiveInput addObjective={this.props.addObjective} goalId={goalId}/>
       </div>

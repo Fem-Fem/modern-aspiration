@@ -31,12 +31,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-/* The connect function calls the mapStateToProps() function each time there is a change in state.
-That mapStateToProps() function receives the state as its first argument and it can happily ignore the stores state and 
-return whatever it likes.
-
-Connect also takes the return value of the mapStateToProps() function and passes it to the component that is in those last set of parentheses.
-We are taking part of the state and mapping them as props to the component
-*/
-
 export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);

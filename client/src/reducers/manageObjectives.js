@@ -2,6 +2,7 @@ export default function objectivesReducer(state = {
   loading: false,
   objectivesData: []}, 
   action){
+
   switch(action.type){
     case 'FETCH_OBJECTIVES':
       console.log("Fetching objectives", action.payload)

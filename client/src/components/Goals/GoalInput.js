@@ -35,20 +35,20 @@ class GoalInput extends Component {
   render(){
     return(
       
-      <Form className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
+      <Form inverted className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
         <h5>Set a New Goal</h5>
         <Form.Field>
-          <label>AIM</label>
+          <label className="form-label">AIM</label>
           <input placeholder="What do you want?" id="aim" required value={this.state.aim} onChange={(e) =>this.handleChange(e)} />
         </Form.Field>
 
         <Form.Field>
-          <label>Category</label>
+          <label className="form-label">Category</label>
           <input placeholder="Category" required id="category" value={this.state.category} onChange={this.handleChange}/>
         </Form.Field>
 
         <Form.Field>
-          <label>Your Strategy:</label>
+          <label className="form-label">Your Strategy:</label>
           <input placeholder="What's the plan?" required id="strategy" value={this.state.strategy} onChange={this.handleChange} />
         </Form.Field>
 

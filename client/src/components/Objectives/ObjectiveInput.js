@@ -26,10 +26,10 @@ class ObjectiveInput extends Component {
   render(){
     return(
   
-      <Form className="new-objective-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
+      <Form inverted className="new-objective-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
 
         <Form.Field>
-          <label>Add Objective</label>
+          <label className="form-label">Add Objective</label>
           <input placeholder="Define the milestones to help you reach your goal" id="description" required value={this.state.description} onChange={(e) =>this.handleChange(e)} />
         </Form.Field>
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react'
-// import { addObjective } from '../../actions/objectivesActions'
 
 class ObjectiveInput extends Component {
   constructor(){
@@ -17,7 +16,6 @@ class ObjectiveInput extends Component {
   }
 
   handleOnSubmit = (e) => {
-    debugger
     e.preventDefault();
     this.props.addObjective(this.state, this.props.goalId);
     this.setState({
@@ -43,6 +41,4 @@ class ObjectiveInput extends Component {
 }
 
 export default ObjectiveInput;
-//export default connect(null, { addObjective })(ObjectiveInput);
-
   

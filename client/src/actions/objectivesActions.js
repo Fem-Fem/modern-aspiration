@@ -37,7 +37,7 @@ export const addObjective = ( objectiveInput, goalId ) => {
         }
 
         dispatch({
-          type: 'UPDATE_OBJECTIVE',
+          type: 'CREATE_OBJECTIVE',
           payload: res
         })
       })

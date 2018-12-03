@@ -11,7 +11,7 @@ export default function objectivesReducer(state = {
       return {...state, loading: true}
     case 'CREATE_OBJECTIVE':
       console.log('CREATE Objective', action.payload )
-      return {...state, objectivesData:[...state.objectivesData, action.payload]}
+      return {...state, objectivesData:[...state.objectivesData, action.payload.objective]}
     case 'DELETE_OBJECTIVE':
       console.log("Deleting Objective", action.payload)
       return {...state, loading: false, objectivesData: state.objectivesData.filter(objective => objective.id !== action.payload.id )}

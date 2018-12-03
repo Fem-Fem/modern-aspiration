@@ -17,6 +17,7 @@ class ObjectiveInput extends Component {
   }
 
   handleOnSubmit = (e) => {
+    debugger
     e.preventDefault();
     this.props.addObjective(this.state, this.props.goalId);
     this.setState({

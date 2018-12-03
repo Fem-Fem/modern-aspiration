@@ -13,10 +13,12 @@ class ObjectivesContainer extends Component {
 
   
   render(){
+    const goalId = this.props.match.params.goalId
     return(
       <div>
         ObjectivesContainer
-        <Objectives objectives={this.props.objectives} />
+        <Objectives objectives={this.props.objectives} deleteObjective={this.props.deleteObjective} />
+        <ObjectiveInput addObjective={this.props.addObjective} goalId={goalId}/>
       </div>
     )
   }

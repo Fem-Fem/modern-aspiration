@@ -10,6 +10,15 @@ export function fetchGoals(){
 }
 
 
+export function fetchGoal(id){
+  return (dispatch) => {
+    dispatch({type: "LOADING_GOALS"})
+      return fetch(`${goalsURL}/${id}`)
+        .then(response => response.json())
+        .then(goal => dispatch({type: "FETCH_GOAL", payload: goal}))
+  }
+}
+
 export const addGoal = ( goalInput ) => {
   let data = {
     method: 'POST',

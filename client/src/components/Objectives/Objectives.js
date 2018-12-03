@@ -9,7 +9,7 @@ const Objectives = props => {
     </li>)
 
   return (
-    <div> 
+    <div class="objectives-box"> 
       <h1>{props.goal.aim}</h1>
       <strong>Key Objectives</strong>
       <ul>

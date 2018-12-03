@@ -20,7 +20,7 @@ color: white;
 color: #61dafb;
 }
 
-div.goal {
+div.goal, div.objectives-box {
   width: 80%;
   padding: 20px;
   border-style: solid;
@@ -38,6 +38,10 @@ div.goal {
   color: white;
 }
 
+h2.ui.header.tagline {
+  color: white;
+}
+
 .objective-items {
   list-style: none;
 }
@@ -45,3 +49,4 @@ div.goal {
 body {
   background-color: #282c34;
 }
+

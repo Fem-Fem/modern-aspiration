@@ -39,7 +39,7 @@ class GoalInput extends Component {
         <h5>Set a New Goal</h5>
         <Form.Field>
           <label className="form-label">AIM</label>
-          <input placeholder="What do you want?" id="aim" required value={this.state.aim} onChange={(e) =>this.handleChange(e)} />
+          <input placeholder="Your Next Achievement" id="aim" required value={this.state.aim} onChange={(e) =>this.handleChange(e)} />
         </Form.Field>
 
         <Form.Field>
@@ -49,7 +49,7 @@ class GoalInput extends Component {
 
         <Form.Field>
           <label className="form-label">Your Strategy:</label>
-          <input placeholder="What's the plan?" required id="strategy" value={this.state.strategy} onChange={this.handleChange} />
+          <input placeholder="What's your plan?" required id="strategy" value={this.state.strategy} onChange={this.handleChange} />
         </Form.Field>
 
         <Button type="submit">Add Goal</Button>

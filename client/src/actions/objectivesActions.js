@@ -2,7 +2,7 @@ const goalsURL = "/api/goals";
 
 export const fetchGoalObjectives = (goalId) => {
   return dispatch => {
-    fetch(`api/goals/${goalId}/objectives`)
+    fetch(`${goalsURL}/${goalId}/objectives`)
       .then(response => response.json())
       .then(objectives => {
         let res = {

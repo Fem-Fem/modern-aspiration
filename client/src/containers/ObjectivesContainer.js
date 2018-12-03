@@ -6,19 +6,24 @@ import { connect } from 'react-redux';
 
 
 class ObjectivesContainer extends Component {
+
+  componentDidMount() {
+    this.props.fetchGoalObjectives(this.props.match.params.goalId)
+  }
+
+  
   render(){
     return(
       <div>
         ObjectivesContainer
-          {/* <Objectives objectives={this.props.objectives} deleteObjective={this.props.deleteObjective}/>
-          <ObjectiveInput addObjective={this.props.addObjective} goalId={this.props.goal.id} /> */}
+        <Objectives objectives={this.props.objectives} />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  objectives: state.goals.goalsData.map(goal => goal.objectives)
+  objectives: state.objectives.objectivesData
 })
 
 const mapDispatchToProps = dispatch => ({

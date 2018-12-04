@@ -18,7 +18,7 @@ class App extends Component {
       <div>
         <h1 className="App-header">Modern Aspiration</h1>
         <Container>
-          <Header as='h2' className='tagline'>Tough times don't last; tough people do.</Header>
+          <Header as='h3' className='tagline'>Tough times don't last; tough people do.</Header>
     
        
           <NavBar />

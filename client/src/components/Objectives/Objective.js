@@ -19,7 +19,7 @@ export default class Objective extends Component {
   render(){
     return(
       <div>
-        <Checkbox checked={this.props.completed} onChange={(e) => this.handleCheck(e)} value={this.props.completed}/>{this.props.description}
+        <Checkbox checked={this.props.completed} onChange={(e) => this.handleCheck(e)} value={this.props.completed}/>{this.props.description}<br/>
         <Button basic color='red' size='mini' onClick={() => this.props.deleteObjective(this.props.id)}> delete </Button>
       </div>
     )

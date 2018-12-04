@@ -1,6 +1,6 @@
 const goalsURL = "/api/goals";
 
-export const fetchGoalObjectives = (goalId) => {
+export const fetchGoalObjectives = goalId => {
   return dispatch => {
     fetch(`${goalsURL}/${goalId}/objectives`)
       .then(response => response.json())
@@ -64,3 +64,8 @@ export const deleteObjective = id => {
       .catch(err => err)
   }
 }
+
+export const toggleCompleted = id => ({
+  type: 'TOGGLE_COMPLETED_OBJECTIVE',
+  id
+})

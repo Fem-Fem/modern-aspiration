@@ -38,6 +38,11 @@ div.goal, div.objectives-box {
   color: white;
 }
 
+.new-objective-form {
+  width: 60%;
+  padding: 20px;
+}
+
 h2.ui.header.tagline {
   color: white;
 }

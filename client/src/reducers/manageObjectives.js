@@ -16,6 +16,10 @@ export default function objectivesReducer(state = {
     case 'DELETE_OBJECTIVE':
       console.log("Deleting Objective", action.payload)
       return {...state, loading: false, objectivesData: state.objectivesData.filter(objective => objective.id !== action.payload.id )}
+    case 'TOGGLE_COMPLETED_OBJECTIVE':
+      console.log("Toggling Complete Objective")
+      let updatedObjectives = state.objectivesData.map(objective => objective.id === action.id ? {...objective, completed: !objective.completed} : objective)
+      return {...state, objectivesData: updatedObjectives}
     default:
       console.log("hit default case in objective reducer")
       return state;

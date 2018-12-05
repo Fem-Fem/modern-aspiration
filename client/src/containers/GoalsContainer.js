@@ -15,11 +15,9 @@ class GoalsContainer extends Component {
   render(){
     return(
       <Container>
-        
-        <GoalInput />
         <GoalsHeader />
         <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal} /> 
-
+        <GoalInput />
       </Container>
     )
   }

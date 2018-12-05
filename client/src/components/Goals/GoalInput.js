@@ -45,7 +45,7 @@ class GoalInput extends Component {
 
         <Form.Field>
           <label className="form-label">Your Strategy:</label>
-          <input placeholder="What's your plan?" required id="strategy" value={this.state.strategy} onChange={this.handleChange} />
+          <textarea placeholder="What's your plan?" required id="strategy" value={this.state.strategy} onChange={this.handleChange} />
         </Form.Field>
 
         <Button type="submit">Add Goal</Button>

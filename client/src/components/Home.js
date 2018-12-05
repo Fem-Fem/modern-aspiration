@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => (
   <div className="home-page">
-    <h4>Set your goals</h4>    
+    <h4>Time's ticking, what's next on your list?</h4>    
   </div>
 )
 

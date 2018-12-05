@@ -2,7 +2,6 @@ import React from 'react';
 import Objective from './Objective'
 
 const Objectives = (props) => {
-  debugger
   const objectivesList = props.objectives.map(objective => 
     <li className="objective-items">
       <Objective 

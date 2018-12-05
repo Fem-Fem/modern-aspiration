@@ -1,5 +1,7 @@
 const goalsURL = "/api/goals";
 
+//////////////////////         FETCH GOAL OBJECTIVES       ////////////////////////
+
 export const fetchGoalObjectives = goalId => {
   return dispatch => {
     fetch(`${goalsURL}/${goalId}/objectives`)
@@ -18,6 +20,8 @@ export const fetchGoalObjectives = goalId => {
   }
 }
 
+//////////////////////         CREATE NEW OBJECTIVE      ////////////////////////
+
 export const addObjective = ( objectiveInput, goalId ) => {
   let data = {
     method: 'POST',
@@ -31,19 +35,15 @@ export const addObjective = ( objectiveInput, goalId ) => {
     fetch(`${ goalsURL }/${goalId}/objectives`, data)
       .then(response => response.json())
       .then(objective => {
-        let res = {
-          objective,
-          goalId
-        }
-
-        dispatch({
-          type: 'CREATE_OBJECTIVE',
-          payload: res
-        })
+        let res = {objective, goalId}
+        dispatch({type: 'CREATE_OBJECTIVE', payload: res})
       })
       .catch(err => err)
   }
 }
+
+//////////////////////         DELETE OBJECTIVE      ////////////////////////
+
 
 export const deleteObjective = id => {
   let data = {
@@ -53,7 +53,6 @@ export const deleteObjective = id => {
       'Content-Type': 'application/json'
     }
   }
-
   return dispatch => {
     fetch(`/objectives/${ id }`, data)
       .then(response => response.json())

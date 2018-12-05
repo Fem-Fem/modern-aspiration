@@ -1,5 +1,4 @@
 const goalsURL = "/api/goals";
-
 export function fetchGoals(){
   return (dispatch) => {
     dispatch({type: "LOADING_GOALS"})
@@ -8,7 +7,6 @@ export function fetchGoals(){
         .then(goals => dispatch({type: 'FETCH_GOALS', payload: goals}))
   }
 }
-
 
 export function fetchGoal(id){
   return (dispatch) => {
@@ -39,7 +37,7 @@ export const addGoal = ( goalInput ) => {
   }
 }
 
-export const deleteGoal = (goal_id) =>{
+export const deleteGoal = goal_id =>{
   let data = {
     method: 'DELETE',
     headers: {
@@ -47,7 +45,6 @@ export const deleteGoal = (goal_id) =>{
       'Content-Type': 'application/json'
     }
   }
-
   return dispatch => {
     fetch(`${goalsURL}/${goal_id}`, data)
       .then(response => response.json())

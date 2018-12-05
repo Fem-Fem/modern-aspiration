@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default class Clock extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {date: new Date()}
   }
@@ -23,8 +23,7 @@ export default class Clock extends Component {
     });
   }
 
-
-  render(){
+  render() {
     return(
       <div>
         <h1>{this.state.date.toLocaleTimeString()}</h1>

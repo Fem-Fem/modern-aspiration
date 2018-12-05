@@ -47,6 +47,7 @@ div.goal, div.objectives-box {
 
 h3.ui.header.tagline {
   color: white;
+  padding: 20px;
 }
 
 .objective-items {

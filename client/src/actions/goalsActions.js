@@ -1,5 +1,6 @@
 const goalsURL = "/api/goals";
-export function fetchGoals(){
+
+export const  fetchGoals = () => {
   return (dispatch) => {
     dispatch({type: "LOADING_GOALS"})
       return fetch(goalsURL)
@@ -8,7 +9,7 @@ export function fetchGoals(){
   }
 }
 
-export function fetchGoal(id){
+export const fetchGoal = id => {
   return (dispatch) => {
     dispatch({type: "LOADING_GOALS"})
       return fetch(`${goalsURL}/${id}`)
@@ -17,7 +18,7 @@ export function fetchGoal(id){
   }
 }
 
-export const addGoal = ( goalInput ) => {
+export const addGoal = goalInput => {
   let data = {
     method: 'POST',
     headers: {

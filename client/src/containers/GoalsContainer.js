@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Goals from '../components/Goals/Goals';
 import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
-import { fetchGoals, deleteGoal } from  '../actions/goalsActions';
+import { fetchGoals, deleteGoal, addGoal } from  '../actions/goalsActions';
 import { Container } from 'semantic-ui-react';
 import GoalsHeader from '../components/Goals/GoalsHeader';
 
@@ -16,7 +16,7 @@ class GoalsContainer extends Component {
     return(
       <Container>
         
-        <GoalInput />
+        <GoalInput addGoal={this.props.addGoal}/>
         <GoalsHeader />
         <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal} /> 
 
@@ -31,4 +31,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);
+const mapDispatchToProps = dispatch => ({
+  fetchGoals: () => dispatch(fetchGoals()),
+  deleteGoal: id => dispatch(deleteGoal(id)),
+  addGoal: goalInput => dispatch(addGoal(goalInput))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(GoalsContainer);

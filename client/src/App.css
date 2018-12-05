@@ -62,3 +62,7 @@ button.ui.red.mini.basic.button.delete-button{
   float: right;
   margin-top: -20px;
 }
+
+i.red.delete.icon.pointer {
+  cursor: pointer;
+}

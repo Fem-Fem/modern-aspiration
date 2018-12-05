@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 
 class GoalInput extends Component {
-
-  constructor(){
+  constructor() {
     super()
     this.state = {
       aim: "",
@@ -12,13 +11,13 @@ class GoalInput extends Component {
     }
   }
 
-  handleChange = (e) =>{
+  handleChange = e => {
     this.setState({
       [e.target.id] : e.target.value
     })
   }
 
-  handleOnSubmit = (e) => {
+  handleOnSubmit = e => {
     e.preventDefault();
     this.props.addGoal(this.state);
     this.setState({
@@ -30,7 +29,6 @@ class GoalInput extends Component {
 
   render(){
     return(
-      
       <Form inverted className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
         <h5>Set a New Goal</h5>
         <Form.Field>

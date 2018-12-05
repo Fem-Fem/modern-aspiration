@@ -42,4 +42,4 @@ const mapDispatchToProps = dispatch => ({
   toggleCompleted: objectiveId => dispatch(toggleCompleted(objectiveId))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)( ObjectivesContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ObjectivesContainer);

@@ -9,7 +9,6 @@ const Goals = props => {
       {goalsList}
     </Container>
   );
-
 };
 
 export default Goals;

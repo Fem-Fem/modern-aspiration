@@ -13,7 +13,6 @@ export default class Objective extends Component {
   handleCheck = e => {
     e.preventDefault();
     this.props.toggleCompleted(this.props.id)
-
   }
   
   render(){
@@ -24,5 +23,4 @@ export default class Objective extends Component {
       </div>
     )
   }
-
 }

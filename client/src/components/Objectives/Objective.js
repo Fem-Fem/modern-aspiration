@@ -2,30 +2,9 @@ import React, { Component } from 'react';
 import { Checkbox, Icon } from 'semantic-ui-react';
 
 export default class Objective extends Component {
-  // constructor(){
-  //   super()
-  //   this.state = {
-  //     completed: false
-  //   }
-  // }
-
-  // handleCheck = e => {
-  //   e.preventDefault();
-  //   if (this.state.completed === false){
-  //     this.setState({completed: true})
-  //   } else {
-  //     this.setState({completed: false})
-  //   }
-  //   this.props.toggleCompleted(this.props.id)
-  // }
 
   handleCheck = () => {
     this.props.toggleCompleted(this.props.id)
-  }
-
-  handleClick = e => {
-    e.preventDefault();
-    alert('clicked delete Icon!')
   }
   
   render() {

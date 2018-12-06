@@ -21,7 +21,9 @@ class GoalInput extends Component {
 
   handleOnSubmit = e => {
     e.preventDefault();
+    console.log('A')
     this.props.addGoal(this.state);
+    console.log('B')
     this.setState({
       aim: "",
       category: "",

@@ -31,15 +31,19 @@ export const addGoal = goalInput => {
     },
     body: JSON.stringify(goalInput)
   }
+  console.log("C")
   return dispatch => {
     fetch(`${ goalsURL }`, data)
       .then(response => response.json())
-      .then(goal => dispatch({
+      .then(goal => {
+        console.log('D')
+        dispatch({
         type: 'CREATE_GOAL',
         payload: goal
-      }))
+      })})
       .catch(err => err)
   }
+  console.log('E')
 }
 
 //////////////////////////////       DELETE GOAL      ///////////////////////////////

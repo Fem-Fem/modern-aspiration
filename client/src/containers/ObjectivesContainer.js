@@ -18,6 +18,7 @@ class ObjectivesContainer extends Component {
     return(
       <div>
         <Objectives 
+          key={this.props.goal.id}
           goal={this.props.goal} 
           objectives={this.props.objectives} 
           deleteObjective={this.props.deleteObjective} 

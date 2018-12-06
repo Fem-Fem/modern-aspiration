@@ -7,6 +7,8 @@ const Objectives = (props) => {
       <Objective 
         key={objective.id} 
         id={objective.id}
+        // new code
+        completed={objective.completed}
         description={objective.description} 
         deleteObjective={props.deleteObjective}
         toggleCompleted={props.toggleCompleted}

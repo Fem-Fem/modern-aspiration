@@ -26,7 +26,7 @@ class ObjectivesController < ApplicationController
   def destroy
     @objective = Objective.find(params[:id])
     @objective.destroy
-    render json :@objective
+    render json: @objective
   end
 
   private

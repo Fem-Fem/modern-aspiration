@@ -42,7 +42,7 @@ export const addObjective = ( objectiveInput, goalId ) => {
   }
 }
 
-//////////////////////         DELETE OBJECTIVE      ////////////////////////
+/////////////////////////         DELETE OBJECTIVE      ////////////////////////
 
 
 export const deleteObjective = id => {
@@ -64,10 +64,7 @@ export const deleteObjective = id => {
   }
 }
 
-// export const toggleCompleted = id => ({
-//   type: 'TOGGLE_COMPLETED_OBJECTIVE',
-//   id
-// })
+////////////////////////// TOGGLE COMPLETED /////////////////////////////
 
 export const toggleCompleted = id => {
   let data = {

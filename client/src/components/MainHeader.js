@@ -8,4 +8,4 @@ const MainHeader = () => (
   </div>
 )
 
-export default MainHeader
+export default MainHeader;

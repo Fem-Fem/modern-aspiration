@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Checkbox, Icon } from 'semantic-ui-react';
-
-
+import { Checkbox, Icon } from 'semantic-ui-react';
 
 export default class Objective extends Component {
   constructor() {

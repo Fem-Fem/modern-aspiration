@@ -17,10 +17,16 @@ class ObjectivesController < ApplicationController
     render json: @objective, status: :created
   end
 
+  def toggle
+    @objective = Objective.find(params[:id])
+    @objective.toggle!(:completed)  
+    render json: @objective
+  end
+
   def destroy
     @objective = Objective.find(params[:id])
     @objective.destroy
-    render json: @objective
+    render json :@objective
   end
 
   private

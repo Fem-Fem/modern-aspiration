@@ -64,7 +64,26 @@ export const deleteObjective = id => {
   }
 }
 
-export const toggleCompleted = id => ({
-  type: 'TOGGLE_COMPLETED_OBJECTIVE',
-  id
-})
+// export const toggleCompleted = id => ({
+//   type: 'TOGGLE_COMPLETED_OBJECTIVE',
+//   id
+// })
+
+export const toggleCompleted = id => {
+  let data = {
+    method: 'PATCH',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }
+  return dispatch => {
+    fetch(`/api/objectives/${ id }`, data)
+      .then(response => response.json())
+      .then(objective => dispatch({
+        type: 'TOGGLE_COMPLETED_OBJECTIVE',
+        payload: objective
+      }))
+      .catch(err => err)
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "modern-aspiration",
+  "version": "1.0.0",
+  "description": "Built with React Redux and Rails, Modern Aspiration encourages users to get more done by strategizing goals and key objectives",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimGonzales/modern-aspiration.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "javascript",
+    "ruby",
+    "rails"
+  ],
+  "author": "Kim Gonzales",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KimGonzales/modern-aspiration/issues"
+  },
+  "homepage": "https://github.com/KimGonzales/modern-aspiration.git"
+}

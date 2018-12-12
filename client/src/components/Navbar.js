@@ -13,14 +13,6 @@ const NavBar = () => {
         
         <span> | </span>
 
-      <NavLink to ="/goals/new"
-        exact
-        activeStyle ={{
-          color: 'grey'
-        }}>New Goal</NavLink> 
-        
-        <span> | </span>
-
       <NavLink to ="/goals"
         exact
         activeStyle={{
